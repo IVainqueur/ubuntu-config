@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Python is Python3, by IV
+#python $@
+params=$@
+
+echo -e "\u001b[33m\u001b[1mRedirecting to python3...\u001b[0m" && sleep 2
+eval "python3 $params"

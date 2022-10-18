@@ -1,0 +1,12 @@
+#!/bin/sh
+
+isOff=$(bluetoothctl scan off | grep NotReady);
+
+if [ "$isOff" != "" ]; then
+    bluetoothctl power on
+    notify-send "Bluetooth Toggle" ON
+else
+    bluetoothctl power off
+    notify-send "Bluetooth Toggle" OFF
+fi
+

@@ -1,0 +1,31 @@
+#!/bin/sh
+# systemd-notify AudioConnectCheck_daemon Starting...
+systemd-notify --ready --status="Startin..."
+
+
+prevAuxStatus=$(cat /proc/asound/card0/codec#0 | grep "Amp-In vals:  \[0x80 0x80\]")
+prevBtStatus=$(pactl list sinks | grep "bluez_sink")
+muted=0
+
+while [ 1 ]; do
+    auxStatus=$(cat /proc/asound/card0/codec#0 | grep "Amp-In vals:  \[0x80 0x80\]")
+    btStatus=$(pactl list sinks | grep "bluez_sink")
+    if [ "$auxStatus" = "" ] && [ "$btStatus" = "" ]; then
+        # Unplugged or Not Disconnected BT Audio
+        if [ "$prevAuxStatus" != "" ] || [ "$prevBtStatus" != "" ]; then
+            playerctl pause -a
+            amixer -q -D pulse sset Master mute
+            muted=1
+        fi
+    else
+        # Plugged in or Connected to BT Device
+        if [ "$muted" = "1" ]; then
+            playerctl play
+            amixer -q -D pulse sset Master unmute
+            muted=0
+        fi
+    fi
+    
+    prevAuxStatus="$auxStatus"
+    prevBtStatus="$btStatus"
+done
