@@ -10,3 +10,5 @@ They are usually meant to make my life easier, mostly to be used as shorcuts.
 2. `bluetoothtoggle`: one line script that toggles bluetooth on or off when called.
 
 3. `python`: instead of running python files like this bash`python3 main.py`, I do it like this bash`python main.py`. Subtle, but worth it.
+
+4. `sinkswitch`: Switch Sound Sinks (Outputs) when called.
