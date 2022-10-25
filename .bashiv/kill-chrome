@@ -1,0 +1,5 @@
+#!/bin/bash
+
+/usr/bin/pkill --oldest --signal TERM -f chrome
+pkill chrome
+notify-send "Killr" "Killed All Chrome Instances"

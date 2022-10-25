@@ -1,0 +1,45 @@
+.tab-background {
+	border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0 !important;
+	margin-top: 4px !important;
+	margin-bottom: 4px !important;
+	padding-bottom: 31px !important;
+	border-radius: 100px !important;
+	text-align: center;
+	border: 1px solid #04404d;
+}
+
+#tabbrowser-tabs .tabbrowser-tab[selected] .tab-background {
+	border: 1px solid #00e1f7 !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab[selected] .tab-content {
+	--rotate: 3deg;
+	margin-right: 10px !important;
+	margin-left: 10px !important;
+	transform: rotate(var(--rotate)) !important;
+}
+
+#tabbrowser-tabs .tab-content {
+	transition: 0.3s ease !important;
+}
+
+.toolbarbutton-1 {
+	transition: 0.3s ease !important;
+	transform: rotate(20deg) !important;
+}
+
+.toolbarbutton-1:hover {
+	transform: rotate(0) !important;
+}
+
+.toolbarbutton-icon {
+	fill: #00e1f7 !important;
+}
+
+#urlbar-background {
+	border-radius: 20px 0 0 20px !important;
+	border: 1px solid #00e1f7 !important;
+}
+
+
+/* #tabbrowser-tabs .tabbrowser-tab:hover:not([selected]) .tab-content */

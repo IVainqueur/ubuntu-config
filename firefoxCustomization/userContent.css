@@ -1,0 +1,26 @@
+@-moz-document domain("youtube.com") {
+	.html5-scrubber-button,
+	.ytp-scrubber-button {
+		background: #00e1f7 !important;
+		box-shadow: 0px 0px 5px #00e1f7;
+	}
+
+	.html5-load-progress,
+	.ytp-load-progress {
+		background: #00e1f760 !important;
+		box-shadow: 0px 0px 5px #00e1f740;
+	}
+
+	.ytp-play-progress {
+		background: #00e1f7 !important;
+		box-shadow: 0px 0px 5px #00e1f7;
+	}
+
+	.ytp-volume-slider-track {
+		background: #00e1f7 !important;
+		box-shadow: 0px 0px 5px #00e1f7;
+	}
+	.ytp-progress-bar-container{
+		bottom: 0 !important;;
+	}
+}
