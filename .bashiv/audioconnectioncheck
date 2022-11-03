@@ -1,7 +1,5 @@
 #!/bin/sh
 # systemd-notify AudioConnectCheck_daemon Starting...
-systemd-notify --ready --status="Startin..."
-
 
 prevAuxStatus=$(cat /proc/asound/card0/codec#0 | grep "Amp-In vals:  \[0x80 0x80\]")
 prevBtStatus=$(pactl list sinks | grep "bluez_sink")
