@@ -1,0 +1,33 @@
+#!/bin/bash
+
+count=0
+current=1
+
+
+increment() 
+{
+	count=$((count + 1))
+}
+
+
+
+while IFS= read -r line;
+do
+		
+	NUM="${line:0:4}";
+	increment
+	if [ "${NUM:3:4}" = "*" ]; then
+		current=$(("${NUM:0:1}" + 1))			
+	fi
+	echo "---> |$NUM| ~~~ $count";
+done < <(wmctrl -d)
+
+if [ "$((current-1))" = "0" ]; then
+	eval "wmctrl -s $((count-1))"
+else
+	eval "wmctrl -s $((current-2))"
+fi
+
+
+
+
