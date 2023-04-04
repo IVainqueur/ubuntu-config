@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while IFS= read -r line
+do
+    bash /home/ivonubuntu/.bashiv/conf/$line
+done < <(ls /home/ivonubuntu/.bashiv/conf)

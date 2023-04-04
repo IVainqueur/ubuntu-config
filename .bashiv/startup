@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pkexec /home/ivonubuntu/.bashiv/bin/conf
+
+zenity --question --text "Startup Apps?" \
+&& /home/ivonubuntu/.bashiv/bin/startup_apps.sh
