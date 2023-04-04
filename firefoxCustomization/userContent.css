@@ -1,4 +1,5 @@
 @-moz-document domain("youtube.com") {
+
 	.html5-scrubber-button,
 	.ytp-scrubber-button {
 		background: #00e1f7 !important;
@@ -15,8 +16,8 @@
 		background: #00e1f7 !important;
 		box-shadow: 0px 0px 5px #00e1f7;
 	}
-	
-	.ytp-progress-bar{
+
+	.ytp-progress-bar {
 		border-radius: 100px;
 		overflow: hidden;
 	}
@@ -25,12 +26,14 @@
 		background: #00e1f7 !important;
 		box-shadow: 0px 0px 5px #00e1f7;
 	}
+
 	.ytp-progress-bar-container {
 		bottom: 0 !important;
 	}
-	
-	.ytp-heat-map-svg path, .ytp-heat-map-svg rect {
-  		fill: #00e1f7 !important;
+
+	.ytp-heat-map-svg path,
+	.ytp-heat-map-svg rect {
+		fill: #00e1f7 !important;
 	}
 
 	* {
@@ -42,31 +45,31 @@
 	.style-scope ytd-video-preview {
 		border-radius: 40px 6px 0 0 !important;
 	}
-	ytd-video-preview:not([has-endorsement])
-		#inline-preview-player.ytp-rounded-inline-preview,
-	ytd-video-preview:not([has-endorsement])
-		#inline-preview-player.ytp-rounded-inline-preview
-		.html5-main-video,
-	ytd-video-preview[rounded-container]
-		#video-preview-container.ytd-video-preview,
+
+	ytd-video-preview:not([has-endorsement]) #inline-preview-player.ytp-rounded-inline-preview,
+	ytd-video-preview:not([has-endorsement]) #inline-preview-player.ytp-rounded-inline-preview .html5-main-video,
+	ytd-video-preview[rounded-container] #video-preview-container.ytd-video-preview,
 	ytd-video-preview[rounded-container] #player-container.ytd-video-preview,
-	ytd-video-preview[rounded-container]
-		#inline-preview-player.ytd-video-preview,
-ytd-rich-grid-media {
+	ytd-video-preview[rounded-container] #inline-preview-player.ytd-video-preview,
+	ytd-rich-grid-media {
 		border-radius: 40px 6px 10px 10px !important;
 		overflow: hidden;
 	}
+
 	#video-preview-container.style-scope.ytd-video-preview {
 		border: 1px solid #00e1f7 !important;
 	}
+
 	#dismissible.style-scope ytd-rich-grid-slim-media {
 		border-radius: 40px 6px 0 0 !important;
 		overflow: hidden;
 	}
+
 	yt-chip-cloud-chip-renderer[selected=""] {
 		background-color: #00e1f790 !important;
 		color: white !important;
 	}
+
 	yt-chip-cloud-chip-renderer {
 		border: 1px solid #00e1f780 !important;
 		border-radius: 100px !important;
@@ -75,21 +78,64 @@ ytd-rich-grid-media {
 	.style-scope.yt-icon {
 		fill: #00e1f7 !important;
 	}
-	#logo-icon > svg > g > g:nth-child(1) > path:nth-child(2) {
+
+	#logo-icon>svg>g>g:nth-child(1)>path:nth-child(2) {
 		fill: white !important;
 	}
 
-	#logo-icon > svg > g > g:nth-child(2) #youtube-paths * {
+	#logo-icon>svg>g>g:nth-child(2) #youtube-paths * {
 		fill: white !important;
 	}
-	
+
 	video {
-  		border-radius: 10px 10px 0 0 !important;;
+		border-radius: 10px 10px 0 0 !important;
+		;
 	}
-	
+
 	#y2mateconverter {
 		position: absolute !important;
 		right: 0 !important;
 	}
+
+	/*
+	* Hiding any and all video suggestions (except searches) 
+	*
+	*/
+	/* ytd-browse img {
+		filter: brightness(0);
+	}
+
+	img:not(ytd-browse img) {
+		filter: brightness(1);
+	}
+
+	ytd-watch-next-secondary-results-renderer img {
+		filter: brightness(0) !important;
+	}
+
+	ytd-browse p,
+	ytd-browse span,
+	ytd-browse h1,
+	ytd-browse yt-formatted-string,
+	ytd-browse a,
+	ytd-watch-next-secondary-results-renderer p,
+	ytd-watch-next-secondary-results-renderer,
+	ytd-watch-next-secondary-results-renderer h1,
+	ytd-watch-next-secondary-results-renderer yt-formatted-string,
+	ytd-watch-next-secondary-results-renderer a,
+	ytd-watch-next-secondary-results-renderer span {
+		color: var(--color) !important;
+		background: var(--color) !important;
+		border-radius: 40px;
+		margin: 1px;
+		--color: #000000;
+	} */
+
+
 }
 
+@-moz-document domain("slack.com") {
+	* {
+		--sk_primary_background: 0, 0, 0;
+	}
+}
